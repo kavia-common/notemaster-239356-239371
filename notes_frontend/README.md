@@ -1,5 +1,14 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+## NoteMaster (Frontend)
+
+This frontend is designed to work with a separate FastAPI backend via client-side `fetch()`.
+Configure the backend base URL via:
+
+- `NEXT_PUBLIC_API_BASE_URL` (see `.env.example`)
+
+> Note: `next.config.ts` uses `output: "export"` (static export). That’s fine because all API calls are made from the browser at runtime, so the backend must be reachable publicly and allow CORS from the frontend origin.
+
 ## Getting Started
 
 First, run the development server:
